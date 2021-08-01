@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+classes: wide
 title:  "Welcome to Jekyll!"
 date:   2021-07-24 17:48:04 +0200
 categories: jekyll update
