@@ -16,21 +16,21 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
       
       - name: Generate Jekyll Archives
-              uses: kannansuresh/jekyll-blog-archive-workflow@master
-              with:
-                archive_url: "https://smart-pv.github.io/archives/archivedata"
-                archive_folder_path: "_archives"
+        uses: kannansuresh/jekyll-blog-archive-workflow@master
+        with:
+          archive_url: "https://smart-pv.github.io/archives/archivedata"
+          archive_folder_path: "_archives"
 
-            - name: setup git config
-              run: |
-                git config user.name "GitHub Actions Bot"
-                git config user.email "<>"
+      - name: setup git config
+        run: |
+         git config user.name "GitHub Actions Bot"
+         git config user.email "<>"
 
-            - name: commit
-              run: |
-                git add --all
-                git commit -m "Created and updated archive files." || echo "No changes to commit."
-                git push origin master || echo "No changes to push."
+      - name: commit
+        run: |
+          git add --all
+          git commit -m "Created and updated archive files." || echo "No changes to commit."
+          git push origin master || echo "No changes to push."
       
       - uses: helaili/jekyll-action@v2
         with:
