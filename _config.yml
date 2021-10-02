@@ -20,8 +20,8 @@ title                    : SmartPV - was, wenn Ihre Solaranlage mehr könnte als
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "SmartPV"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description              : "Eine Blog rund ums Thema Energieverbrauchsoptimierung von einem Nerd für Nerds."
+url                      : "https://smart-pv.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "smart-pv/smart-pv.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -131,7 +131,7 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: https://twitter.com/d_scho
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
@@ -150,6 +150,9 @@ footer:
     - label: "Impressum"
       icon: "fab fa-fw"
       url: "/impressum"
+    - label: "Datenschutz"
+      icon: "fab fa-fw"
+      url: "/datenschutz"
 
 
 # Reading Files
@@ -253,10 +256,10 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: /category/
 tag_archive:
   type: liquid
-  path: /tags/
+  path: /tag/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #   enabled:
@@ -269,6 +272,11 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
 
 # HTML Compression
 # - https://jch.penibelst.de/
