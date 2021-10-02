@@ -9,29 +9,18 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      
-      - uses: helaili/jekyll-action@v2
+      - name: setup
+        uses: actions/checkout@v2
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
-          token: ${{ secrets.GH_TOKEN }}
-      
-      - name: Generate Jekyll Archives
-        uses: kannansuresh/jekyll-blog-archive-workflow@master
+          ruby-version: 3.0.1
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
         with:
-          archive_url: "https://smart-pv.github.io/archives/archivedata"
-          archive_folder_path: "_archives"
-
-      - name: setup git config
-        run: |
-         git config user.name "GitHub Actions Bot"
-         git config user.email "<>"
-
-      - name: commit
-        run: |
-          git add --all
-          git commit -m "Created and updated archive files." || echo "No changes to commit."
-          git push origin main || echo "No changes to push."
-      
-      - uses: helaili/jekyll-action@v2
+          enable_cache: true
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
