@@ -11,6 +11,8 @@ intro:
   - excerpt: 'Dieser Blog ist von einem Nerd für Nerds, die sich mit dem Thema SmartHome beschäftigen. Einen besonderen Fokus lege ich auf Energieeffizienz.'
 ---
 
+
+
 {% include feature_row id="intro" type="center" %}
 
 {% if paginator %}

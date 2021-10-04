@@ -20,4 +20,7 @@ Als wir dann in unser eigenes Haus gezogen sind, wurde zunächst die Heizkurve d
 Sektorenkopplung
 ===
 Einen riesigen Hebel für diese Eigenverbrauchsoptimierung ist eine Steuerung der Wärmepumpe anhand der Stromerzeugung der Photovoltaikanlage. Diese Kopplung zwischen Wärmeerzeugung und Stromerzeugung nennt man Sektorenkopplung.
+
 Das Prinzip ist einfach: Verbrauche die überschüssige Energie, die aus der Photovoltaikanlage generiert wird bevorzugt zur Erzeugung von Wärme, die gut gespeichert werden kann. In unserem Fall ist die Regelung so konzipiert, dass die Wärmepumpe ein relativ niedriges Grundniveau für die Warmwasser-Temperatur fährt. Hier liegen wir bei gerade einmal 43 Grad. Wenn die Photovoltaikanlage einen deutlichen Überschuss an Energie liefert (mehr als 3 kW Überschuss), bekommt die Wärmepumpe den Befehl, das Warmwasser auf Peak-Temperatur (56 °C) aufzuheizen.
+
+Wie das genau funktioniert erfährst du in einem folgenden Post.
